@@ -17,7 +17,6 @@ function jump() {
                     isJumping = false;
                 } else {
                     position -= 5;
-                    position *= gravity;
                     dino.style.bottom = position + "px";
                 }
             }, 20);
