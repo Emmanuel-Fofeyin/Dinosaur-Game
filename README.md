@@ -1,2 +1,1 @@
-# Dinosaur
--Game
+# Dinosaur-Game
