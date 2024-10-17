@@ -35,14 +35,6 @@ body {
     animation: move 2s linear infinite;
 }
 
-#scoreboard {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333; /* Change color as desired */
-}
-
-
 @keyframes move {
     0% { right: 0; }
     100% { right: 600px; }
