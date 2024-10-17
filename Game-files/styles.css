@@ -8,8 +8,8 @@ body {
 }
 
 #gameArea {
-    width: 900px;
-    height: 750px;
+    width: 600px;
+    height: 150px;
     position: relative;
     background-color: white;
     border: 1px solid black;
