@@ -43,3 +43,39 @@ setInterval(() => {
     }
 }, 10);
 
+let score = 0;
+let isPaused = false;
+const scoreElement = document.getElementById('score');
+const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+
+// Function to update the score
+function updateScore() {
+    if (!isPaused) {
+        score++;
+        scoreElement.textContent = score;
+    }
+}
+
+// Function to pause/resume the game
+function togglePauseResume() {
+    isPaused = !isPaused;
+    pauseResumeBtn.textContent = isPaused ? 'Resume' : 'Pause';
+    
+    // Here you would also add logic to pause any game animations or intervals
+}
+
+// Example game loop
+function gameLoop() {
+    if (!isPaused) {
+        // Your game logic here (e.g., collision detection, movement)
+        updateScore();
+    }
+    requestAnimationFrame(gameLoop);
+}
+
+// Start the game loop
+requestAnimationFrame(gameLoop);
+
+// Event listener for the pause/resume button
+pauseResumeBtn.addEventListener('click', togglePauseResume);
+
