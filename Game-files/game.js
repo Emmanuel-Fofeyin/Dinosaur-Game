@@ -54,8 +54,8 @@ setInterval(() => {
     if (obstacleLeft <= 0) {
         obstaclesPassed++;
 
-        // Increment score for every 10 obstacles passed
-        if (obstaclesPassed % 10 === 0) {
+        // Increment score for every 1 obstacles passed
+        if (obstaclesPassed % 1 === 0) {
             score += 100;
             scoreDisplay.textContent = "Score: " + score;
         }
