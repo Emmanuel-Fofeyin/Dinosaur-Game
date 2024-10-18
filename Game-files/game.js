@@ -51,11 +51,11 @@ setInterval(() => {
     }
 
     // Check if the obstacle has been successfully passed
-    if (obstacleLeft <= 0) {
+    if (obstacleLeft <= 0 && obstacleLeft > -50) {  // Ensure obstacle is passed
         obstaclesPassed++;
 
-        // Increment score for every 1 obstacles passed
-        if (obstaclesPassed % 1 === 0) {
+        // Increment score only for every 10 obstacles passed
+        if (obstaclesPassed % 10 === 0) {
             score += 100;
             scoreDisplay.textContent = "Score: " + score;
         }
