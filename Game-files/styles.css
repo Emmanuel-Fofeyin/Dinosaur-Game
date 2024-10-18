@@ -35,6 +35,15 @@ body {
     animation: move 2s linear infinite;
 }
 
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
 @keyframes move {
     0% { right: 0; }
     100% { right: 600px; }
