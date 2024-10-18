@@ -1,4 +1,4 @@
-const dino = document.getElementById("dino"); 
+const dino = document.getElementById("dino");
 let isJumping = false;
 let gravity = 0.9;
 
@@ -39,12 +39,13 @@ document.addEventListener("keydown", function(event) {
 });
 
 const obstacle = document.getElementById("obstacle");
+
 setInterval(() => {
-    let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("right"));
+    let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"));
     let dinoBottom = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
 
-    // Collision detection
-    if (obstacleLeft > 0 && obstacleLeft < 50 && dinoBottom <= 50) {
+    // Check if obstacle is within range and if dino is low enough to collide
+    if (obstacleLeft > 0 && obstacleLeft < 50 && dinoBottom < 50) {
         alert("Game Over");
         clearInterval(this);  // Stop the game on game over
     }
